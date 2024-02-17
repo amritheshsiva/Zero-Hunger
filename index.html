@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Zero Hunger</title>
+</head>
+
+<body>
+    <header>
+        <h1>Zero Hunger Initiative</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="loadContent('home')">Home</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('donation')">Donation</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('track-donation')">Track Donation</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('get-involved')">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">
+        <!-- Content will be loaded here based on the selected tab -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Zero Hunger Initiative. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function loadContent(tab) {
+            var contentSection = document.getElementById('content');
+
+            switch (tab) {
+                case 'home':
+                    contentSection.innerHTML = '<h2>Welcome to the Home Page</h2><p>This is the home content.</p>';
+                    break;
+                case 'donation':
+                    contentSection.innerHTML = '<h2>Donation</h2><p>The Zero Hunger initiative appreciates your contribution to help us in our mission to end hunger. Your donation makes a significant impact on the lives of those in need.</p>';
+                    break;
+                case 'track-donation':
+                    contentSection.innerHTML = '<h2>Track Donation</h2><p>Track the impact of your donations and see how they are making a difference in the fight against hunger. Your support is vital to achieving a world without hunger.</p>';
+                    break;
+                case 'get-involved':
+                    contentSection.innerHTML = '<h2>Get Involved</h2><p>If you share our vision of a world without hunger, join us in making a difference. You can contribute by volunteering, donating, or spreading awareness about the importance of food security.</p>';
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
